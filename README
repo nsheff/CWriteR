@@ -1,0 +1,5 @@
+CWriteR
+
+CWriteR is just an extremely simple package that provides a couple of R functions to interface to C functions to write vectors. I got frustrated with R being much slower than C to write vectors to file, and this simple utility was my solution. It is not super complicated and at this point can only write one dimensional vectors, but that's all I needed.
+
+I also added a function to sample from vectors, writing every nth character in C. I use CWriteR in other packages to store temporary information onto disk to reduce memory use when dealing with massive vectors.

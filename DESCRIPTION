@@ -1,0 +1,11 @@
+Package: CWriteR
+Version: 1.0
+Title: Fast writing of large vectors
+Description: Package provides functions that use C to write faster than base R.
+Author: Nathan Sheffield <http://www.github.com/sheffien>
+Maintainer: Nathan Sheffield <sheffien@users.noreply.github.com>
+Suggests:
+    dipPeak
+License: Artistic-2.0
+URL: http://www.nathansheffield.com
+LazyLoad: yes
