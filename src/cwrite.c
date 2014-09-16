@@ -13,7 +13,7 @@ SEXP cwriteC(SEXP y, SEXP l, SEXP file)
 	//open a file
 	FILE* ofp = fopen(cFile, "a"); //a for append.
 	float x;
-	printf("size:%i\n", (int) *length);
+	printf("Writing %i items...", (int) *length);
 
 	//loop through vector, printing to file
 	for (int i=0; i<*length; i++) {
@@ -42,7 +42,7 @@ SEXP cwriteStepC(SEXP y, SEXP l, SEXP file, SEXP step)
 	FILE* ofp = fopen(cFile, "a"); //a for append.
 	float x;
 	int count =0;
-	printf("size:%i\n", (int) *length);
+	printf("Writing %i items...", (int) (*length / *cStep) );
 
 	//loop through vector, printing to file
 	for (int i=0; i<*length; i++) {

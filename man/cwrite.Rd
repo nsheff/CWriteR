@@ -3,7 +3,7 @@
 \alias{cwrite}
 \title{cwrite: Write vector to file}
 \usage{
-cwrite(y, l, file)
+cwrite(y, l, file, showWarnings = TRUE)
 }
 \arguments{
 \item{y}{vector to write.}

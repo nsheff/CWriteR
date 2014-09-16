@@ -3,7 +3,7 @@
 \alias{cwriteStep}
 \title{cwriteStep: Write a sample of a vector to a file using C for fast writing.}
 \usage{
-cwriteStep(y, l, file, step)
+cwriteStep(y, l, file, step, showWarnings = TRUE)
 }
 \arguments{
 \item{y}{vector to write.}

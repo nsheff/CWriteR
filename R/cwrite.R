@@ -28,14 +28,14 @@ NULL
 #' @examples
 #' d = rnorm(1000);
 #' cwrite(d, length(d), "output.txt")
-cwrite <- function(y, l, file) {
+cwrite <- function(y, l, file, showWarnings=TRUE) {
 	#Check for file sanity.
 	if(file.access(file, mode=0) != 0) {
 		#file does not exist; create it.
 		file.create(file);
 	} else if(file.access(file, mode=2) != 0) {
 		stop("file [", file, "] not writable!");
-	} else {
+	} else if (showWarnings) {
 		warning("File exists; appending.");
 	}
 
@@ -63,7 +63,7 @@ cwrite <- function(y, l, file) {
 #' @examples
 #' d = rnorm(1000);
 #' cwriteStep(d, length(d), "output.txt", step=100)
-cwriteStep <- function(y, l, file, step)
+cwriteStep <- function(y, l, file, step, showWarnings=TRUE)
 {
 	#Check for file sanity.
 	if(file.access(file, mode=0) != 0) {
@@ -71,7 +71,7 @@ cwriteStep <- function(y, l, file, step)
 		file.create(file);
 	} else if(file.access(file, mode=2) != 0) {
 		stop("file [", file, "] not writable!");
-	} else {
+	} else if (showWarnings) {
 		warning("File exists; appending.");
 	}
 	res = .Call("cwriteStepC",
